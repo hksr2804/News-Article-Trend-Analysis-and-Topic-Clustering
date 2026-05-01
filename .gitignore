@@ -32,3 +32,6 @@ Thumbs.db
 
 # Session & planning files (personal)
 .claude/
+
+# Test suite (not needed to run the dashboard)
+tests/
