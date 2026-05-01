@@ -1,9 +1,12 @@
-pyspark==4.1.1
-spacy==3.8.14
-scikit-learn==1.8.0
+# Dashboard dependencies (required to run src/dashboard.py)
 streamlit==1.57.0
 pandas==3.0.2
 numpy==2.4.4
 matplotlib==3.10.9
+scikit-learn==1.8.0
 joblib==1.5.3
-pytest==9.0.3
+
+# Retraining dependencies (only needed to run train.py — requires Java 17)
+# pyspark==4.1.1
+# spacy==3.8.14
+# After installing spacy: python -m spacy download en_core_web_sm
