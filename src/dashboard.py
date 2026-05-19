@@ -7,6 +7,7 @@ filter_by_date(df, start_date, end_date)          → pd.DataFrame
 filter_by_topics(df, selected_topics, threshold)  → pd.DataFrame
 load_topic_names(path, num_topics)                → dict[str, str]
 build_bar_chart(keywords)                         → matplotlib.figure.Figure | None
+build_wordcloud(keywords)                         → PIL.Image.Image | None
 
 Entry point
 -----------
