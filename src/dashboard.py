@@ -204,7 +204,17 @@ def run() -> None:
     else:
         st.info("Not enough text data to extract keywords for the current filters.")
 
-    img = build_wordcloud(keywords)
+    wordcloud_keywords = extract_keywords(
+        texts=filtered["processed_text"],
+        top_n=config.TOP_N_WORDCLOUD,
+        max_features=config.TFIDF_MAX_FEATURES,
+        max_df=config.TFIDF_MAX_DF,
+        min_df=config.TFIDF_MIN_DF,
+        ngram_range=config.TFIDF_NGRAM_RANGE,
+        candidate_multiplier=config.TFIDF_CANDIDATE_MULTIPLIER,
+        news_stopwords=config.NEWS_STOPWORDS,
+    )
+    img = build_wordcloud(wordcloud_keywords)
     if img is not None:
         st.image(img, use_container_width=True)
 

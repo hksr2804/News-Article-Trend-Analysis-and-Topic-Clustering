@@ -26,6 +26,7 @@ THRESHOLD = 0.2   # min topic probability for an article to match a topic
 
 # ── TF-IDF keyword extraction ─────────────────────────────────────────────────
 TOP_N_KEYWORDS             = 5
+TOP_N_WORDCLOUD            = 30
 TFIDF_MAX_FEATURES         = 5000
 TFIDF_MAX_DF               = 0.5
 TFIDF_MIN_DF               = 3
