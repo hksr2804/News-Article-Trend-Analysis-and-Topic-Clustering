@@ -26,6 +26,7 @@ matplotlib.use("Agg")  # must come before pyplot import; non-interactive backend
 import matplotlib.pyplot as plt
 import pandas as pd
 import streamlit as st
+from wordcloud import WordCloud
 
 import importlib
 import config
@@ -92,6 +93,20 @@ def build_bar_chart(keywords: list[tuple[str, float]]) -> "matplotlib.figure.Fig
     ax.set_title("Top Keywords")
     fig.tight_layout()
     return fig
+
+
+def build_wordcloud(keywords: list[tuple[str, float]]) -> "PIL.Image.Image | None":
+    """Build a word cloud image from keyword TF-IDF scores.
+
+    Returns a PIL Image, or None if keywords is empty.
+    """
+    if not keywords:
+        return None
+
+    freq = {word: score for word, score in keywords}
+    wc = WordCloud(width=800, height=400, background_color="white")
+    wc.generate_from_frequencies(freq)
+    return wc.to_image()
 
 
 # ---------------------------------------------------------------------------
