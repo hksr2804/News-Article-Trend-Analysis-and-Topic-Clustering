@@ -26,7 +26,7 @@ THRESHOLD = 0.2   # min topic probability for an article to match a topic
 
 # ── TF-IDF keyword extraction ─────────────────────────────────────────────────
 TOP_N_KEYWORDS             = 5
-TOP_N_WORDCLOUD            = 30
+TOP_N_WORDCLOUD            = 20
 TFIDF_MAX_FEATURES         = 5000
 TFIDF_MAX_DF               = 0.5
 TFIDF_MIN_DF               = 3
@@ -63,4 +63,8 @@ NEWS_STOPWORDS = {
     "donald",
     # Explicit CTA bigrams from old HuffPost article formatting
     "check huffpost", "twitter facebook", "huffpost rise",
+    # Words appearing in >25% of all year×topic combos at top-20 (wordcloud expansion)
+    "state", "child",
+    "black", "change", "kid", "live", "food", "show", "family",
+    "country",
 }
