@@ -66,5 +66,5 @@ NEWS_STOPWORDS = {
     # Words appearing in >25% of all year×topic combos at top-20 (wordcloud expansion)
     "state", "child",
     "black", "change", "kid", "live", "food", "show", "family",
-    "country",
+    "country", "stop", "end", "try",
 }
