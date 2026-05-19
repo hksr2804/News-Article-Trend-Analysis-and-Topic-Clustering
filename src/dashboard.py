@@ -204,6 +204,10 @@ def run() -> None:
     else:
         st.info("Not enough text data to extract keywords for the current filters.")
 
+    img = build_wordcloud(keywords)
+    if img is not None:
+        st.image(img, use_container_width=True)
+
 
 if __name__ == "__main__":
     run()
