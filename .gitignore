@@ -35,3 +35,8 @@ Thumbs.db
 
 # Test suite (not needed to run the dashboard)
 tests/
+
+# Documentation/planning files — keep only README.md on GitHub
+*.md
+!README.md
+*.xlsx
